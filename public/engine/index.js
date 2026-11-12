@@ -60,7 +60,19 @@ async function storageUsersInfo() {
         </li>`
     }
     extrato += `</ol>`
-
+    
+    let pontos = `
+    <div class="badge text-bg-success text-wrap" style="width: 10rem;" style="margin-right: 10px;">
+    Pontos: ${userLoged.pontos}
+    </div>
+    `
+    let saldo = `
+    <div class="badge text-bg-info text-wrap" style="width: 10rem;" style="margin-right: 10px;">
+    Saldo: ${userLoged.saldo}
+    </div>
+    `
+    
     document.getElementById("login-extrato").innerHTML = extrato
     document.getElementById("login-menu").innerHTML = extrato
+    document.getElementById("conta").innerHTML = pontos + saldo
 }
